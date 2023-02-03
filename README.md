@@ -1,5 +1,17 @@
 # SUI
 
+## SUI: install
+
+### Download
+```
+wget -O ~/sui-install.sh https://raw.githubusercontent.com/cyberomanov/sui-help/main/sui-update.sh && \
+chmod u+x ~/sui-install.sh
+```
+### Run
+```
+~/sui-install.sh
+```
+
 ## SUI: auto-update-every-4-hours
 
 ### Download
