@@ -2,24 +2,24 @@
 
 ## SUI: install with fixed ports
 
-### Download
+### 1. Download
 ```
 wget -O ~/sui-install.sh https://raw.githubusercontent.com/cyberomanov/sui-help/main/sui-install.sh && \
 chmod u+x ~/sui-install.sh
 ```
-### Run
+### 2. Run
 ```
 ~/sui-install.sh
 ```
 
 ## SUI: auto-update-every-4-hours with fixed ports
 
-### Download
+### 1. Download
 ```
 wget -O ~/sui-update.sh https://raw.githubusercontent.com/cyberomanov/sui-help/main/sui-update.sh && \
 chmod u+x ~/sui-update.sh
 ```
-### Crontab
+### 2. Crontab
 1. Open crontab editor:
 ```
 crontab -e
