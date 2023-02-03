@@ -1,6 +1,6 @@
 # SUI
 
-## SUI: install
+## SUI: install with fixed ports
 
 ### Download
 ```
@@ -12,7 +12,7 @@ chmod u+x ~/sui-install.sh
 ~/sui-install.sh
 ```
 
-## SUI: auto-update-every-4-hours
+## SUI: auto-update-every-4-hours with fixed ports
 
 ### Download
 ```
