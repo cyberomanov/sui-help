@@ -1,15 +1,15 @@
 #!/usr/bin/bash
 
 sudo apt update && sudo apt upgrade -y && \
-sudo apt install wget jq git libclang-dev libpq-dev cmake -y && \
+sudo apt install wget jq git libclang-dev libpq-dev cmake -y
 
 sudo curl https://sh.rustup.rs -sSf | sh -s -- -y && \
-source "$HOME/.cargo/env" && \
+source "$HOME/.cargo/env"
 
 cd $HOME && \
 mkdir -p $HOME/.sui; \
 rm -Rvf ~/sui; \
-git clone https://github.com/MystenLabs/sui; \
+git clone https://github.com/MystenLabs/sui
 
 cd ~/sui && \
 git remote add upstream https://github.com/MystenLabs/sui; \
@@ -47,20 +47,20 @@ else
     echo -e "ports already fixed [p2p.rs].\n"
 fi
 
-cargo build --release && \
+cargo build --release
 
 mv $HOME/sui/target/release/{sui,sui-node,sui-faucet} /usr/bin/ && \
-cd && \
+cd
 
 wget -qO $HOME/.sui/genesis.blob https://github.com/MystenLabs/sui-genesis/raw/main/testnet/genesis.blob && \
-cp $HOME/sui/crates/sui-config/data/fullnode-template.yaml $HOME/.sui/fullnode.yaml; \
+cp $HOME/sui/crates/sui-config/data/fullnode-template.yaml $HOME/.sui/fullnode.yaml
 
 sed -i -e "s%db-path:.*%db-path: \"$HOME/.sui/db\"%; "\
 "s%network-address:.*%network-address: \"/dns/localhost/tcp/18080/http\"%; "\
 "s%metrics-address:.*%metrics-address: \"0.0.0.0:19184\"%; "\
 "s%json-rpc-address:.*%json-rpc-address: \"0.0.0.0:19000\"%; "\
 "s%websocket-address:.*%websocket-address: \"0.0.0.0:19001\"%; "\
-"s%genesis-file-location:.*%genesis-file-location: \"$HOME/.sui/genesis.blob\"%; " $HOME/.sui/fullnode.yaml && \
+"s%genesis-file-location:.*%genesis-file-location: \"$HOME/.sui/genesis.blob\"%; " $HOME/.sui/fullnode.yaml
 
 sudo tee -a $HOME/.sui/fullnode.yaml  >/dev/null <<EOF
 
@@ -85,7 +85,7 @@ Restart=on-failure
 RestartSec=3
 LimitNOFILE=65535
 [Install]
-WantedBy=multi-user.target" > /etc/systemd/system/suid.service && \
+WantedBy=multi-user.target" > /etc/systemd/system/suid.service
 
 sudo systemctl daemon-reload && \
 sudo systemctl enable suid && \
