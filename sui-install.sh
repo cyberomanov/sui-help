@@ -73,6 +73,14 @@ p2p-config:
     - address: "/ip4/84.46.255.11/udp/8084"
     - address: "/ip4/162.19.215.24/udp/8080"
     - address: "/ip4/95.217.57.232/udp/8080"
+    - address: "/ip4/193.34.212.34/udp/18080"
+    - address: "/ip4/193.34.212.41/udp/18080"
+    - address: "/ip4/193.34.212.47/udp/18080"
+    - address: "/ip4/74.50.70.118/udp/18080"
+    - address: "/ip4/65.109.116.22/udp/18080"
+    - address: "/ip4/66.45.231.30/udp/18080"
+    - address: "/ip4/173.225.108.78/udp/18080"
+    - address: "/ip4/65.109.116.21/udp/18080"
 EOF
 
 printf "[Unit]
