@@ -72,6 +72,7 @@ p2p-config:
     - address: "/ip4/136.243.40.38/udp/8080"
     - address: "/ip4/84.46.255.11/udp/8084"
     - address: "/ip4/162.19.215.24/udp/8080"
+    - address: "/ip4/95.217.57.232/udp/8080"
 EOF
 
 printf "[Unit]
