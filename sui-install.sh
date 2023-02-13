@@ -81,6 +81,14 @@ p2p-config:
     - address: "/ip4/66.45.231.30/udp/18080"
     - address: "/ip4/173.225.108.78/udp/18080"
     - address: "/ip4/65.109.116.21/udp/18080"
+    
+authority-store-pruning-config:
+  objects-num-latest-versions-to-retain: 5
+  objects-pruning-period-secs: 86400
+  objects-pruning-initial-delay-secs: 3600
+  num-latest-epoch-dbs-to-retain: 3
+  epoch-db-pruning-period-secs: 3600
+  enable-live-pruner: true
 EOF
 
 printf "[Unit]
